@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 
 namespace Milestone1
 {
@@ -11,6 +12,10 @@ namespace Milestone1
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
+        //added attruibutes
+        List<Knight_Bad_> enemies1;
+        List<Knight_Good_> tower1;
 
         public Game1()
         {
