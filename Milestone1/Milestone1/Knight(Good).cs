@@ -12,7 +12,7 @@ namespace Milestone1
     class Knight_Good_ : Tower
     {
         //constructor
-        public Knight_Good_() : base(60, 60, 100, 100, 150, 150, 10)
+        public Knight_Good_() : base(60, 60, 100, 100, 150, 150, 10,100)
         {
 
         }

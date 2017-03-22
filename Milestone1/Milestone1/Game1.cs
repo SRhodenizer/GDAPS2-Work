@@ -2,6 +2,15 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
+using System;
+using System.ComponentModel;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
 
 namespace Milestone1
 {
@@ -12,10 +21,12 @@ namespace Milestone1
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        public int[,] tiles;
 
         //added attruibutes
         List<Knight_Bad_> enemies1;
         List<Knight_Good_> tower1;
+        Tile[,]map;
 
         public Game1()
         {
@@ -46,6 +57,47 @@ namespace Milestone1
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            StreamReader load = new StreamReader("ExampleMap1.txt");
+            string line;
+            int tileRow = 0;
+            int tileColumn = 0;
+            while ((line = load.ReadLine()) != null)
+            {
+                if (line == "")//ignores the \n commands to split up rows in the array
+                {
+                    continue;
+                }
+                else
+                {
+                    char[] rowTiles = line.ToCharArray();
+                    foreach (char tile in rowTiles)
+                    {
+                        int type = 0;
+                        string tileStr = tile.ToString();
+                        int.TryParse(tileStr, out type);
+                        tiles[tileRow, tileColumn] = type;
+                        tileColumn++;
+                    }
+                    tileRow++;
+                    if (tileRow > 9) //autobreaks if the loop exceeds number of rows in array
+                    {
+                        break;
+                    }
+                    tileColumn = 0;
+                }
+            }
+            
+
+            //converts recieved int array into tile array
+            for (int row = 0; row < tiles.GetLength(0); row++)
+            {
+                for (int column = 0; column < tiles.GetLength(1); column++)
+                {
+                    map[row, column] = new Tile(row*50,column*50,50,50,tiles[row,column]); 
+                }
+            }
+
+
         }
 
         /// <summary>

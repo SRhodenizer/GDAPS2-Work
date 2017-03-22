@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.ComponentModel;
+using System.Drawing;
+using System.IO;
+using System.Timers;
+
 
 namespace Milestone1
 {
@@ -24,6 +29,7 @@ namespace Milestone1
         private int damage;
         private bool alive;
         private Texture2D image;
+        private int cost;
 
         //properties for attributes
         public int SizeX
@@ -77,8 +83,13 @@ namespace Milestone1
             get { return damage; }
 
         }
+        public int Cost
+        {
+            get { return cost; }
+
+        }
         //constructor
-        public Tower(int w, int h, int x, int y, int rX, int rY, int dmg)
+        public Tower(int w, int h, int x, int y, int rX, int rY, int dmg, int cst)
         {
 
             sizeX = w;
@@ -90,6 +101,7 @@ namespace Milestone1
             rangeY = rY;
             range = new Rectangle(new Point(x, y), new Point(rX, rY));
             damage = dmg;
+            cost = cst;
         }
 
         //attack method - returns damage dealt as an int
@@ -97,7 +109,18 @@ namespace Milestone1
         {
             if (range.Intersects(enemyPos) == true)
             {
+                //provides a period of time in between attacks
+                Timer time = new Timer();
+                time.Start();
+                if (time.ToString() == "500")
+                {
+                    time.Stop();
+                    time.Dispose();
+                }
+
                 return damage;
+
+                
             }
             else
             {

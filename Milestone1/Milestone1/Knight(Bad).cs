@@ -13,7 +13,7 @@ namespace Milestone1
     {
 
         //constructor
-        public Knight_Bad_() : base(100, 5, 50, 50, 110, 110)
+        public Knight_Bad_() : base(100, 5, 50, 50, 110, 110, 100)
         {
 
         }
