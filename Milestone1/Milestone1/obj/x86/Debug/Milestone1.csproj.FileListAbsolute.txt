@@ -1,0 +1,9 @@
+Z:\IGMProfile\Documents\GDAPS 2 Work\Milestone1\Milestone1\bin\DesktopGL\x86\Debug\OpenTK.dll.config
+Z:\IGMProfile\Documents\GDAPS 2 Work\Milestone1\Milestone1\bin\DesktopGL\x86\Debug\Milestone1.exe
+Z:\IGMProfile\Documents\GDAPS 2 Work\Milestone1\Milestone1\bin\DesktopGL\x86\Debug\Milestone1.pdb
+Z:\IGMProfile\Documents\GDAPS 2 Work\Milestone1\Milestone1\bin\DesktopGL\x86\Debug\MonoGame.Framework.dll
+Z:\IGMProfile\Documents\GDAPS 2 Work\Milestone1\Milestone1\bin\DesktopGL\x86\Debug\NVorbis.dll
+Z:\IGMProfile\Documents\GDAPS 2 Work\Milestone1\Milestone1\bin\DesktopGL\x86\Debug\OpenTK.dll
+Z:\IGMProfile\Documents\GDAPS 2 Work\Milestone1\Milestone1\obj\x86\Debug\Milestone1.csprojResolveAssemblyReference.cache
+Z:\IGMProfile\Documents\GDAPS 2 Work\Milestone1\Milestone1\obj\x86\Debug\Milestone1.exe
+Z:\IGMProfile\Documents\GDAPS 2 Work\Milestone1\Milestone1\obj\x86\Debug\Milestone1.pdb

@@ -2,8 +2,6 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
-using System;
-using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -61,6 +59,7 @@ namespace Milestone1
             string line;
             int tileRow = 0;
             int tileColumn = 0;
+            tiles = new int[15,10];
             while ((line = load.ReadLine()) != null)
             {
                 if (line == "")//ignores the \n commands to split up rows in the array
